@@ -1,5 +1,10 @@
 {
 	"name": "covid-reporting-adf-vsk-1",
+	"properties": {
+		"globalConfigurations": {
+			"PipelineBillingEnabled": "true"
+		}
+	},
 	"location": "southindia",
 	"identity": {
 		"type": "SystemAssigned",

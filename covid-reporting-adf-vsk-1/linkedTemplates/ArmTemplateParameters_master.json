@@ -1,0 +1,27 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "covid-reporting-adf-vsk-1"
+		},
+		"AzureSqlDatabase1_connectionString": {
+			"value": "Integrated Security=False;Encrypt=True;Connection Timeout=30;Data Source=covidreportingpracticesqlserver.database.windows.net;Initial Catalog=covidreportingadfpractice;User ID=serveradmin"
+		},
+		"AzureBlobStorage1_properties_typeProperties_sasUri_secretName": {
+			"value": "blobstoragegen1"
+		},
+		"AzureBlobStorage2_properties_typeProperties_sasUri_secretName": {
+			"value": "AzureDataLakeGen2"
+		},
+		"AzureKeyVault1_properties_typeProperties_baseUrl": {
+			"value": "https://covid-reporting-adf-kv.vault.azure.net/"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}

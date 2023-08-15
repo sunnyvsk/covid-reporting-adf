@@ -2,15 +2,15 @@
 	"name": "datalakestorage",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "AzureBlobStorage2",
+			"referenceName": "AzureDataLakeStorage1",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
-				"type": "AzureBlobStorageLocation",
-				"container": "landingcovidreporting"
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "landingcovidreporting"
 			},
 			"columnDelimiter": "\t",
 			"escapeChar": "\\",

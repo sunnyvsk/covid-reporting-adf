@@ -23,6 +23,9 @@
 		"AzureKeyVault1_properties_typeProperties_baseUrl": {
 			"value": "https://covid-reporting-adf-kv.vault.azure.net/"
 		},
+		"trigger1_properties_typeProperties_scope": {
+			"value": "/subscriptions/c70d9b60-f087-46e5-ad59-9fb14727d691/resourceGroups/CovidReportingADF/providers/Microsoft.Storage/storageAccounts/covidpracticeblobstorage"
+		},
 		"containerUri": {
 			"value": ""
 		},

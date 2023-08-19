@@ -32,6 +32,10 @@
 			"type": "string",
 			"defaultValue": "https://covid-reporting-adf-kv.vault.azure.net/"
 		},
+		"trigger1_properties_typeProperties_scope": {
+			"type": "string",
+			"defaultValue": "/subscriptions/c70d9b60-f087-46e5-ad59-9fb14727d691/resourceGroups/CovidReportingADF/providers/Microsoft.Storage/storageAccounts/covidpracticeblobstorage"
+		},
 		"containerUri": {
 			"type": "string",
 			"metadata": "URI to storage account containing linked ARM templates"
@@ -76,6 +80,9 @@
 					},
 					"AzureBlobStorage2_properties_typeProperties_sasUri_secretName": {
 						"value": "[parameters('AzureBlobStorage2_properties_typeProperties_sasUri_secretName')]"
+					},
+					"trigger1_properties_typeProperties_scope": {
+						"value": "[parameters('trigger1_properties_typeProperties_scope')]"
 					}
 				}
 			},

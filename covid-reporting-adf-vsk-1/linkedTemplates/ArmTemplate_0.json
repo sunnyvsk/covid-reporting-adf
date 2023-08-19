@@ -31,6 +31,10 @@
 		"AzureBlobStorage2_properties_typeProperties_sasUri_secretName": {
 			"type": "string",
 			"defaultValue": "AzureDataLakeGen2"
+		},
+		"trigger1_properties_typeProperties_scope": {
+			"type": "string",
+			"defaultValue": "/subscriptions/c70d9b60-f087-46e5-ad59-9fb14727d691/resourceGroups/CovidReportingADF/providers/Microsoft.Storage/storageAccounts/covidpracticeblobstorage"
 		}
 	},
 	"variables": {
@@ -398,6 +402,36 @@
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/populationziptsvfile')]",
 				"[concat(variables('factoryId'), '/datasets/datalakestorage')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/trigger1')]",
+			"type": "Microsoft.DataFactory/factories/triggers",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"runtimeState": "Started",
+				"pipelines": [
+					{
+						"pipelineReference": {
+							"referenceName": "copy_data_from_blob",
+							"type": "PipelineReference"
+						},
+						"parameters": {}
+					}
+				],
+				"type": "BlobEventsTrigger",
+				"typeProperties": {
+					"blobPathBeginsWith": "/landing/blobs/",
+					"ignoreEmptyBlobs": true,
+					"scope": "[parameters('trigger1_properties_typeProperties_scope')]",
+					"events": [
+						"Microsoft.Storage.BlobCreated"
+					]
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/pipelines/copy_data_from_blob')]"
 			]
 		}
 	]

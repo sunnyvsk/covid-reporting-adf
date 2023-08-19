@@ -70,7 +70,12 @@
 								"secureOutput": false,
 								"secureInput": false
 							},
-							"userProperties": []
+							"userProperties": [],
+							"typeProperties": {
+								"url": "https://google.com",
+								"method": "POST",
+								"body": "\"Status\": \"Fail\" "
+							}
 						}
 					],
 					"ifTrueActivities": [

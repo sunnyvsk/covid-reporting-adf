@@ -5,6 +5,9 @@
 		"factoryName": {
 			"value": "covid-reporting-adf-vsk-1"
 		},
+		"AzureDataLakeStorage1_accountKey": {
+			"value": ""
+		},
 		"AzureSqlDatabase1_connectionString": {
 			"value": "Integrated Security=False;Encrypt=True;Connection Timeout=30;Data Source=covidreportingpracticesqlserver.database.windows.net;Initial Catalog=covidreportingadfpractice;User ID=serveradmin"
 		},
@@ -13,6 +16,9 @@
 		},
 		"AzureBlobStorage2_properties_typeProperties_sasUri_secretName": {
 			"value": "AzureDataLakeGen2"
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"value": "https://covidreportingsaadfvsk.dfs.core.windows.net/"
 		},
 		"AzureKeyVault1_properties_typeProperties_baseUrl": {
 			"value": "https://covid-reporting-adf-kv.vault.azure.net/"

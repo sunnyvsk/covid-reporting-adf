@@ -108,7 +108,7 @@
 							},
 							"userProperties": [],
 							"typeProperties": {
-								"variableName": "",
+								"variableName": "sinkFileName",
 								"value": ""
 							}
 						}
@@ -147,6 +147,11 @@
 				}
 			}
 		],
+		"variables": {
+			"sinkFileName": {
+				"type": "String"
+			}
+		},
 		"annotations": []
 	}
 }

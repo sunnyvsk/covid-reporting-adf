@@ -8,6 +8,11 @@
 				"dependsOn": [],
 				"userProperties": [],
 				"typeProperties": {
+					"items": {
+						"value": "@pipeline().parameters.relative_url",
+						"type": "Expression"
+					},
+					"isSequential": true,
 					"activities": [
 						{
 							"name": "Copy data1",
@@ -73,7 +78,8 @@
 		],
 		"parameters": {
 			"relative_url": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "{'nationalcasedeath',"
 			}
 		},
 		"annotations": []

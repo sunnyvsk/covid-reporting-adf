@@ -9,13 +9,14 @@
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
-				"type": "HttpServerLocation"
+				"type": "HttpServerLocation",
+				"relativeUrl": "cloudboxacademy/covid19/tree/main/ecdc_data"
 			},
 			"columnDelimiter": ",",
 			"rowDelimiter": "\n",
 			"escapeChar": "\\",
 			"firstRowAsHeader": false,
-			"quoteChar": null
+			"quoteChar": "|"
 		},
 		"schema": []
 	}

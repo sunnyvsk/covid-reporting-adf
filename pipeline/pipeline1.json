@@ -110,7 +110,7 @@
 							"typeProperties": {
 								"variableName": "sinkFileName",
 								"value": {
-									"value": "@activity('Lookup1').output.value.sinkFileName",
+									"value": "@item().sourceRelativeURL",
 									"type": "Expression"
 								}
 							}
@@ -150,11 +150,6 @@
 				}
 			}
 		],
-		"variables": {
-			"sinkFileName": {
-				"type": "String"
-			}
-		},
 		"annotations": []
 	}
 }

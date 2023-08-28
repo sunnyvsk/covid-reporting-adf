@@ -1,0 +1,22 @@
+{
+	"name": "ECDCData",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ECDC Data",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "HttpServerLocation",
+				"relativeUrl": "/publications-data/data-national-14-day-notification-rate-covid-19"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}

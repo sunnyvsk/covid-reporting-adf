@@ -24,6 +24,8 @@
 						{
 							"name": "Copy data1",
 							"type": "Copy",
+							"state": "Inactive",
+							"onInactiveMarkAs": "Succeeded",
 							"dependsOn": [
 								{
 									"activity": "Set variable1",
@@ -108,7 +110,7 @@
 							},
 							"userProperties": [],
 							"typeProperties": {
-								"variableName": "sinkFileName",
+								"variableName": "sourceRelativeURL",
 								"value": {
 									"value": "@item().sourceRelativeURL",
 									"type": "Expression"
@@ -150,6 +152,11 @@
 				}
 			}
 		],
+		"variables": {
+			"sourceRelativeURL": {
+				"type": "String"
+			}
+		},
 		"annotations": []
 	}
 }

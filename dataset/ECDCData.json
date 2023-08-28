@@ -17,7 +17,7 @@
 			"location": {
 				"type": "HttpServerLocation",
 				"relativeUrl": {
-					"value": "@dataset().relative_url",
+					"value": "@concat('covid19/',dataset().relative_url,'/csv/data.csv')",
 					"type": "Expression"
 				}
 			},

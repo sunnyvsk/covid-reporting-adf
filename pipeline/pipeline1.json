@@ -109,7 +109,10 @@
 							"userProperties": [],
 							"typeProperties": {
 								"variableName": "sinkFileName",
-								"value": ""
+								"value": {
+									"value": "@activity('Lookup1').output.value.sinkFileName",
+									"type": "Expression"
+								}
 							}
 						}
 					]

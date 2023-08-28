@@ -8,10 +8,6 @@
 				"dependsOn": [],
 				"userProperties": [],
 				"typeProperties": {
-					"items": {
-						"value": "@pipeline().parameters.relative_url",
-						"type": "Expression"
-					},
 					"isSequential": true,
 					"activities": [
 						{
@@ -62,7 +58,13 @@
 							"inputs": [
 								{
 									"referenceName": "ECDCData",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"relative_url": {
+											"value": "@item()",
+											"type": "Expression"
+										}
+									}
 								}
 							],
 							"outputs": [
@@ -79,7 +81,7 @@
 		"parameters": {
 			"relative_url": {
 				"type": "string",
-				"defaultValue": "{'nationalcasedeath',"
+				"defaultValue": "{'nationalcasedeath','hospitalicuadmissionrates'}"
 			}
 		},
 		"annotations": []

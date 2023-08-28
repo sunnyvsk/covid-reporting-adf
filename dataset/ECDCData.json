@@ -13,9 +13,10 @@
 				"relativeUrl": "/publications-data/data-national-14-day-notification-rate-covid-19"
 			},
 			"columnDelimiter": ",",
+			"rowDelimiter": "\n",
 			"escapeChar": "\\",
 			"firstRowAsHeader": true,
-			"quoteChar": "\""
+			"quoteChar": null
 		},
 		"schema": []
 	}

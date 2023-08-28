@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "HttpServerLocation",
-				"relativeUrl": "publications-data/data-national-14-day-notification-rate-covid-19"
+				"relativeUrl": "covid19/nationalcasedeath/csv/data.csv"
 			},
 			"columnDelimiter": ",",
 			"rowDelimiter": "\n",

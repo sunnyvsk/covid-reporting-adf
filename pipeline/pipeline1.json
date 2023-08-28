@@ -99,7 +99,22 @@
 								"secureOutput": false,
 								"secureInput": false
 							},
-							"userProperties": []
+							"userProperties": [],
+							"typeProperties": {
+								"variableName": "pipelineReturnValue",
+								"value": [
+									{
+										"key": "sourceRelativeURL",
+										"value": {
+											"type": "String"
+										}
+									},
+									{
+										"key": ""
+									}
+								],
+								"setSystemVariable": true
+							}
 						}
 					]
 				}

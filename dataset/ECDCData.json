@@ -5,12 +5,21 @@
 			"referenceName": "ECDC Data",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"relative_url": {
+				"type": "string",
+				"defaultValue": "covid19/nationalcasedeath/csv/data.csv"
+			}
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
 				"type": "HttpServerLocation",
-				"relativeUrl": "covid19/nationalcasedeath/csv/data.csv"
+				"relativeUrl": {
+					"value": "@dataset().relative_url",
+					"type": "Expression"
+				}
 			},
 			"columnDelimiter": ",",
 			"rowDelimiter": "\n",

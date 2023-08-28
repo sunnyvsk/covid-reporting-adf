@@ -71,6 +71,11 @@
 				}
 			}
 		],
+		"parameters": {
+			"relative_url": {
+				"type": "string"
+			}
+		},
 		"annotations": []
 	}
 }

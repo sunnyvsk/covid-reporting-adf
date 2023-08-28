@@ -1,0 +1,22 @@
+{
+	"name": "ECDCData_copy1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ECDCData1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "HttpServerLocation"
+			},
+			"columnDelimiter": ",",
+			"rowDelimiter": "\n",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": null
+		},
+		"schema": []
+	}
+}

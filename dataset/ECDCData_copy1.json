@@ -2,15 +2,16 @@
 	"name": "ECDCData_copy1",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "ECDCData1",
+			"referenceName": "AzureBlobStorage3",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
-				"type": "HttpServerLocation",
-				"relativeUrl": "cloudboxacademy/covid19/tree/main/ecdc_data"
+				"type": "AzureBlobStorageLocation",
+				"fileName": "ecdc_file_list_for_2_files.json",
+				"container": "config"
 			},
 			"columnDelimiter": ",",
 			"rowDelimiter": "\n",

@@ -34,7 +34,7 @@
 						"formatSettings": {
 							"type": "DelimitedTextWriteSettings",
 							"quoteAllText": true,
-							"fileExtension": ".txt"
+							"fileExtension": ".csv"
 						}
 					},
 					"enableStaging": false,
@@ -55,7 +55,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "datalakestorage",
+						"referenceName": "DelimitedText1",
 						"type": "DatasetReference"
 					}
 				]

@@ -10,7 +10,7 @@
 				"type": "string",
 				"defaultValue": "covid19/nationalcasedeath/csv/data.csv"
 			},
-			"base_urk": {
+			"base_url": {
 				"type": "string"
 			}
 		},

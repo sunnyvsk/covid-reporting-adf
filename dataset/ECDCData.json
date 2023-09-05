@@ -9,6 +9,9 @@
 			"relative_url": {
 				"type": "string",
 				"defaultValue": "covid19/nationalcasedeath/csv/data.csv"
+			},
+			"base_urk": {
+				"type": "string"
 			}
 		},
 		"annotations": [],

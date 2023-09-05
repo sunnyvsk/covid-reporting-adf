@@ -1,1 +1,6 @@
-{}
+{
+	"BaseURL": {
+		"type": "string",
+		"value": "https://github.com"
+	}
+}

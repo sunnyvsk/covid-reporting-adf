@@ -3,13 +3,7 @@
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ECDC Data",
-			"type": "LinkedServiceReference",
-			"parameters": {
-				"BaseURL": {
-					"value": "@dataset().base_urk",
-					"type": "Expression"
-				}
-			}
+			"type": "LinkedServiceReference"
 		},
 		"parameters": {
 			"relative_url": {

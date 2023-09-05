@@ -1,6 +1,12 @@
 {
 	"name": "covid-reporting-adf-vsk-1",
 	"properties": {
+		"globalParameters": {
+			"BaseURL": {
+				"type": "string",
+				"value": "https://github.com"
+			}
+		},
 		"globalConfigurations": {
 			"PipelineBillingEnabled": "true"
 		}

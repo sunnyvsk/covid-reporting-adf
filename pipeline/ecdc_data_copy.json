@@ -1,5 +1,5 @@
 {
-	"name": "pipeline1",
+	"name": "ecdc_data_copy",
 	"properties": {
 		"activities": [
 			{
@@ -80,10 +80,6 @@
 									"parameters": {
 										"relative_url": {
 											"value": "@variables('sourceRelativeURL')",
-											"type": "Expression"
-										},
-										"base_url": {
-											"value": "@pipeline().globalParameters.BaseURL",
 											"type": "Expression"
 										}
 									}

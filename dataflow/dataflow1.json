@@ -25,7 +25,7 @@
 						"referenceName": "AzureBlobStorage3",
 						"type": "LinkedServiceReference"
 					},
-					"name": "lookupdat"
+					"name": "lookupdate"
 				}
 			],
 			"transformations": [
@@ -116,7 +116,18 @@
 				"     quoteChar: '\\\"',",
 				"     columnNamesAsHeader: false,",
 				"     skipDuplicateMapInputs: true,",
-				"     skipDuplicateMapOutputs: true) ~> lookupdat"
+				"     skipDuplicateMapOutputs: true,",
+				"     mapColumn(",
+				"          country,",
+				"          country_code,",
+				"          population,",
+				"          source,",
+				"          reported_date,",
+				"          country_special,",
+				"          count_confirmed_cases = {count_confirmed cases},",
+				"          count_deaths,",
+				"          continent",
+				"     )) ~> lookupdate"
 			]
 		}
 	}

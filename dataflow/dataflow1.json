@@ -10,12 +10,28 @@
 						"type": "DatasetReference"
 					},
 					"name": "source1"
+				},
+				{
+					"dataset": {
+						"referenceName": "DelimitedText3",
+						"type": "DatasetReference"
+					},
+					"name": "CountryLookup"
 				}
 			],
 			"sinks": [],
 			"transformations": [
 				{
 					"name": "select1"
+				},
+				{
+					"name": "PivotCounts"
+				},
+				{
+					"name": "lookup1"
+				},
+				{
+					"name": "select2"
 				}
 			],
 			"scriptLines": [
@@ -33,6 +49,16 @@
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false) ~> source1",
+				"source(output(",
+				"          country as string,",
+				"          country_code_2_digit as string,",
+				"          country_code_3_digit as string,",
+				"          continent as string,",
+				"          population as integer",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> CountryLookup",
 				"source1 select(mapColumn(",
 				"          country,",
 				"          country_code,",
@@ -45,7 +71,34 @@
 				"               'reported' + '_date' = $$)",
 				"     ),",
 				"     skipDuplicateMapInputs: false,",
-				"     skipDuplicateMapOutputs: true) ~> select1"
+				"     skipDuplicateMapOutputs: true) ~> select1",
+				"select1 pivot(groupBy(country,",
+				"          country_code,",
+				"          population,",
+				"          source,",
+				"          reported_date,",
+				"          country_special = country + country_code),",
+				"     pivotBy(indicator, ['confirmed cases', 'deaths']),",
+				"     count = sum(daily_count),",
+				"     columnNaming: '$N_$V',",
+				"     lateral: true) ~> PivotCounts",
+				"PivotCounts, CountryLookup lookup(PivotCounts@country == CountryLookup@country,",
+				"     multiple: false,",
+				"     pickup: 'any',",
+				"     broadcast: 'auto')~> lookup1",
+				"lookup1 select(mapColumn(",
+				"          country = PivotCounts@country,",
+				"          country_code,",
+				"          population = PivotCounts@population,",
+				"          source,",
+				"          reported_date,",
+				"          country_special,",
+				"          {count_confirmed cases},",
+				"          count_deaths,",
+				"          continent",
+				"     ),",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> select2"
 			]
 		}
 	}

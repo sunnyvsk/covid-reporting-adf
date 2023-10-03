@@ -131,7 +131,7 @@
 				"     ),",
 				"     partitionBy('key',",
 				"          0,",
-				"          country",
+				"          continent",
 				"     )) ~> lookupdate"
 			]
 		}

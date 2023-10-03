@@ -22,7 +22,7 @@
 			"sinks": [
 				{
 					"linkedService": {
-						"referenceName": "AzureBlobStorage3",
+						"referenceName": "AzureBlobStorage2",
 						"type": "LinkedServiceReference"
 					},
 					"name": "lookupdate"
@@ -110,7 +110,8 @@
 				"select2 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     format: 'delimited',",
-				"     container: 'LOOKUP_CASES_DEATHS',",
+				"     container: 'landingcovidreporting',",
+				"     folderPath: 'lookup_case_data',",
 				"     columnDelimiter: ',',",
 				"     escapeChar: '\\\\',",
 				"     quoteChar: '\\\"',",

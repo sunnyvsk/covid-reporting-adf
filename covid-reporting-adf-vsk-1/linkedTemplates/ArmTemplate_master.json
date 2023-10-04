@@ -92,9 +92,6 @@
 					"AzureDataLakeStorage2_accountKey": {
 						"value": "[parameters('AzureDataLakeStorage2_accountKey')]"
 					},
-					"AzureSqlDatabase1_connectionString": {
-						"value": "[parameters('AzureSqlDatabase1_connectionString')]"
-					},
 					"AzureDataLakeStorage1_properties_typeProperties_url": {
 						"value": "[parameters('AzureDataLakeStorage1_properties_typeProperties_url')]"
 					},
@@ -112,9 +109,6 @@
 					},
 					"AzureBlobStorage1_properties_typeProperties_sasUri_secretName": {
 						"value": "[parameters('AzureBlobStorage1_properties_typeProperties_sasUri_secretName')]"
-					},
-					"AzureBlobStorage2_properties_typeProperties_sasUri_secretName": {
-						"value": "[parameters('AzureBlobStorage2_properties_typeProperties_sasUri_secretName')]"
 					}
 				}
 			},
@@ -133,6 +127,12 @@
 				"parameters": {
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
+					},
+					"AzureSqlDatabase1_connectionString": {
+						"value": "[parameters('AzureSqlDatabase1_connectionString')]"
+					},
+					"AzureBlobStorage2_properties_typeProperties_sasUri_secretName": {
+						"value": "[parameters('AzureBlobStorage2_properties_typeProperties_sasUri_secretName')]"
 					},
 					"trigger1_properties_typeProperties_scope": {
 						"value": "[parameters('trigger1_properties_typeProperties_scope')]"

@@ -106,9 +106,6 @@
 					},
 					"ECDCData1_properties_typeProperties_url": {
 						"value": "[parameters('ECDCData1_properties_typeProperties_url')]"
-					},
-					"AzureBlobStorage1_properties_typeProperties_sasUri_secretName": {
-						"value": "[parameters('AzureBlobStorage1_properties_typeProperties_sasUri_secretName')]"
 					}
 				}
 			},
@@ -130,6 +127,9 @@
 					},
 					"AzureSqlDatabase1_connectionString": {
 						"value": "[parameters('AzureSqlDatabase1_connectionString')]"
+					},
+					"AzureBlobStorage1_properties_typeProperties_sasUri_secretName": {
+						"value": "[parameters('AzureBlobStorage1_properties_typeProperties_sasUri_secretName')]"
 					},
 					"AzureBlobStorage2_properties_typeProperties_sasUri_secretName": {
 						"value": "[parameters('AzureBlobStorage2_properties_typeProperties_sasUri_secretName')]"

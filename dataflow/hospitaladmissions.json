@@ -147,7 +147,7 @@
 				"          reported_date,",
 				"          source),",
 				"     pivotBy(indicator, ['Daily hospital occupancy', 'Daily ICU occupancy']),",
-				"     {} = count,",
+				"     count = sum(value),",
 				"     columnNaming: '$V_$N',",
 				"     lateral: true) ~> PivotDaily"
 			]

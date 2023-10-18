@@ -1,0 +1,9 @@
+{
+	"name": "monitorevents",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "78ad0b94-b44b-42de-b18a-c7772189b0b7",
+		"tenantId": "e0793d39-0939-496d-b129-198edd916feb"
+	}
+}
